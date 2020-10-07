@@ -40,8 +40,68 @@ fun main() {
 
     //if expression
 
-    
+    val nilai = 1
 
+    if (nilai > 90){
+        println("hebat")
+    }
+    else if (nilai > 70){
+        println("lumayan")
+    }
+    else if (nilai > 50){
+        println("coba lagi")
+    }else{
+        println("semangat")
+    }
+
+    //when expression => switch case di bahsa pemrograman lain
+
+    val ujian = "D"
+
+    when(ujian){
+        "A"-> {// bisa menggunakan kurung kurawal
+            println("hebat")
+        }
+        "B"-> println("mayan")
+        else -> println("ujian ulang")
+    }
+
+    when(ujian){
+        "A","B","C" -> println("selamat lulus")
+        "D", "E" ->{
+            println("maaf")
+        }
+        else -> println("nilai tidak ditemukan")
+    }
+
+    //when in
+    val nilaiLulus = arrayOf("A", "B", "C")
+    when(ujian){
+        in nilaiLulus -> println("selamat anda lulus")
+        !in nilaiLulus -> println("maaf coba lagi tahun depan")
+    }
+
+    //when is => digunakan untuk mengecek tipe data
+
+    val umur = 10
+
+    when(umur){
+        is Int -> println("benar")
+        !is Int -> println("salah")
+    }
+
+    //when sebagai pengganti if
+
+    val nilaiUjian = 0
+    when{
+        nilaiUjian > 90  -> println("lulus")
+        nilaiUjian > 70  -> println("lumayan")
+        nilaiUjian > 30  -> println("coba lagi")
+        else -> println("nilai $nilaiUjian tidak ditemukan")
+    }
+
+    //for
+    
 
 
 }
